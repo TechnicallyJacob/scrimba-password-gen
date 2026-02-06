@@ -34,20 +34,17 @@ passwordLengthInput.addEventListener('input', () => {
     passwordLength = passwordLengthInput.value;
 });
 
+
 let passOne = document.getElementById('password-one');
 let passTwo = document.getElementById('password-two');
 
 let symbols = document.getElementById('symbols');
 let numbers = document.getElementById('numbers');
-let typeOfPass;
-
-const changeStatus = () => {
-
-}
 
 console.log(symbols);
 console.log(numbers);
 
+let typeOfPass;
 const passwordType = () => {
     if (symbols && numbers) {
         typeOfPass = allChars;
@@ -65,10 +62,10 @@ const passwordGen = () => {
     randomPassTwo = [];
     passwordType()
     for (let i = 0; i < passwordLength; i++) {
-    let ranPassOne = Math.floor(Math.random() * typeOfPass.length);
-    let ranPassTwo = Math.floor(Math.random() * typeOfPass.length);
-    randomPassOne += typeOfPass[ranPassOne];
-    randomPassTwo += typeOfPass[ranPassTwo];
+        let ranPassOne = Math.floor(Math.random() * typeOfPass.length);
+        let ranPassTwo = Math.floor(Math.random() * typeOfPass.length);
+        randomPassOne += typeOfPass[ranPassOne];
+        randomPassTwo += typeOfPass[ranPassTwo];
     }
     passOne.textContent = randomPassOne;
     passTwo.textContent = randomPassTwo;
