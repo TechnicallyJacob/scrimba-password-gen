@@ -28,8 +28,11 @@ const onlyChars = ["A","B","C","D","E","F","G","H","I","J",
     "m","n","o","p","q","r","s","t","u","v","w","x","y","z"
 ];
 
-let passwordLength = document.getElementById('password-length').value;
-console.log(passwordLength);
+let passwordLength;
+const passwordLengthInput = document.getElementById('password-length');
+passwordLengthInput.addEventListener('input', () => {
+    passwordLength = passwordLengthInput.value;
+});
 
 let passOne = document.getElementById('password-one');
 let passTwo = document.getElementById('password-two');
@@ -38,15 +41,12 @@ let symbols = document.getElementById('symbols');
 let numbers = document.getElementById('numbers');
 let typeOfPass;
 
-console.log(symbols)
-
-symbols.addEventListener('click', changeStatus() => {
-
-});
-
 const changeStatus = () => {
-console.log('hello')
+
 }
+
+console.log(symbols);
+console.log(numbers);
 
 const passwordType = () => {
     if (symbols && numbers) {
