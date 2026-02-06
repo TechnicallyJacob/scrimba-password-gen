@@ -28,13 +28,25 @@ const onlyChars = ["A","B","C","D","E","F","G","H","I","J",
     "m","n","o","p","q","r","s","t","u","v","w","x","y","z"
 ];
 
-let passwordLength = 15
-let passOne = [];
-let passTwo = [];
+let passwordLength = document.getElementById('password-length').value;
+console.log(passwordLength);
 
-let symbols = true;
-let numbers = true;
+let passOne = document.getElementById('password-one');
+let passTwo = document.getElementById('password-two');
+
+let symbols = document.getElementById('symbols');
+let numbers = document.getElementById('numbers');
 let typeOfPass;
+
+console.log(symbols)
+
+symbols.addEventListener('click', changeStatus() => {
+
+});
+
+const changeStatus = () => {
+console.log('hello')
+}
 
 const passwordType = () => {
     if (symbols && numbers) {
@@ -49,20 +61,17 @@ const passwordType = () => {
 }
 
 const passwordGen = () => {
+    randomPassOne = [];
+    randomPassTwo = [];
     passwordType()
     for (let i = 0; i < passwordLength; i++) {
     let ranPassOne = Math.floor(Math.random() * typeOfPass.length);
     let ranPassTwo = Math.floor(Math.random() * typeOfPass.length);
-    passOne += typeOfPass[ranPassOne];
-    passTwo += typeOfPass[ranPassTwo];
+    randomPassOne += typeOfPass[ranPassOne];
+    randomPassTwo += typeOfPass[ranPassTwo];
     }
-    return {
-        one: passOne,
-        two: passTwo
-    };
+    passOne.textContent = randomPassOne;
+    passTwo.textContent = randomPassTwo;
 }
-const randomPassword = passwordGen();
-console.log(randomPassword.one);
-console.log(randomPassword.two);
 
 

@@ -9,7 +9,26 @@
 <body>
     <h1>Generate a <br><span>random password</span></h1>
     <p>Never use an insecure password again</p>
-    <button>Generate passwords</button>
+    <button onclick="passwordGen()">Generate passwords</button>
+    <select id="password-length">
+        <option value="8">8</option>
+        <option>9</option>
+        <option>10</option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+    <div>
+    <p>Include Numbers</p>
+    <button id="numbers" onclick="changeStatus()"></button>
+    <p>Include Symbols</p>
+    <button id="symbols" onclick="changeStatus()"></button>
     <div id="password-one"></div>
     <div id="password-two"></div>
     <script src="index.js"></script>
