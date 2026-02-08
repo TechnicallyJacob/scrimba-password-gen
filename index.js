@@ -34,15 +34,32 @@ passwordLengthInput.addEventListener('input', () => {
     passwordLength = passwordLengthInput.value;
 });
 
+let symbolText = document.getElementById('symbol-text');
+let symbols = true;
+const changeSymbol = () => {
+    symbols = !symbols;
+    console.log(symbols);
+    if (symbols === false) {
+        symbolText.textContent = 'Exclude Symbols';
+    } else {
+        symbolText.textContent = 'Include Symbols';
+    }
+}
+
+let numberText = document.getElementById('number-text');
+let numbers = true;
+const changeNumber = () => {
+    numbers = !numbers;
+    console.log(numbers);
+    if (numbers === false) {
+        numberText.textContent = 'Exclude Numbers';
+    } else {
+        numberText.textContent = 'Include Numbers';
+    }
+}
 
 let passOne = document.getElementById('password-one');
 let passTwo = document.getElementById('password-two');
-
-let symbols = document.getElementById('symbols');
-let numbers = document.getElementById('numbers');
-
-console.log(symbols);
-console.log(numbers);
 
 let typeOfPass;
 const passwordType = () => {
@@ -55,12 +72,12 @@ const passwordType = () => {
     } else {
         typeOfPass = onlyChars;
     }
-}
+};
 
 const passwordGen = () => {
     randomPassOne = [];
     randomPassTwo = [];
-    passwordType()
+    passwordType();
     for (let i = 0; i < passwordLength; i++) {
         let ranPassOne = Math.floor(Math.random() * typeOfPass.length);
         let ranPassTwo = Math.floor(Math.random() * typeOfPass.length);
@@ -69,6 +86,4 @@ const passwordGen = () => {
     }
     passOne.textContent = randomPassOne;
     passTwo.textContent = randomPassTwo;
-}
-
-
+};

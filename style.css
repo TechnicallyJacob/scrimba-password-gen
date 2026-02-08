@@ -1,9 +1,45 @@
 html body {
     margin: 0;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 #password-one, #password-two {
     background-color: blue;
     color: aliceblue;
     padding: 20px 20px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid red;
+}
+
+#sub-container {
+    display: flex;
+    flex-direction: column;
+    
+    border: 2px solid blue;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row-reverse;
 }
