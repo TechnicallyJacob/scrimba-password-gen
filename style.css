@@ -11,7 +11,6 @@ html body {
     font-style: normal;
 }
 
-
 #password-one, #password-two {
     background-color: blue;
     color: aliceblue;
@@ -42,4 +41,24 @@ html body {
 .button-container {
     display: flex;
     flex-direction: row-reverse;
+}
+
+#copy-message {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 43%;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.copied {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }

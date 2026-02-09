@@ -28,6 +28,8 @@ const onlyChars = ["A","B","C","D","E","F","G","H","I","J",
     "m","n","o","p","q","r","s","t","u","v","w","x","y","z"
 ];
 
+let copyMessage = document.getElementById('copy-message');
+
 let passwordLength;
 const passwordLengthInput = document.getElementById('password-length');
 passwordLengthInput.addEventListener('input', () => {
@@ -87,3 +89,31 @@ const passwordGen = () => {
     passOne.textContent = randomPassOne;
     passTwo.textContent = randomPassTwo;
 };
+
+passOne.addEventListener('click', () => {
+    navigator.clipboard.writeText(passOne.textContent)
+    .then (() => {
+        copyMessage.classList.remove('copied');
+        setTimeout(() => {
+        copyMessage.classList.toggle('copied');
+        }, 2000);
+        console.log('Password successfully copied to clipboard');
+    })
+    .catch(err => {
+        console.error('Failed to copy text', err);
+    });    
+});
+
+passTwo.addEventListener('click', () => {
+    navigator.clipboard.writeText(passOne.textContent)
+    .then (() => {
+        copyMessage.classList.remove('copied');
+        setTimeout(() => {
+        copyMessage.classList.toggle('copied');
+        }, 2000);
+        console.log('Password successfully copied to clipboard');
+    })
+    .catch(err => {
+        console.error('Failed to copy text', err);
+    });    
+});
