@@ -18,19 +18,17 @@
         <div id="sub-container">
             <h1>Generate a <br><span id="title-sub-text">random password</span></h1>
             <p>Never use an insecure password again</p>
-            <button onclick="passwordGen()">Generate passwords</button>
         </div>
 
         <div id="input-container">
             <input id="password-length" type="number" placeholder="pick a number 8-20">
             <div class="button-container">
-            <p id="number-text">Include Numbers</p>
-            <button id="numbers" onclick="changeNumber()"></button>
+                <button id="numbers">Numbers</button>
             </div>
             <div class="button-container">
-            <p id="symbol-text">Include Symbols</p>
-            <button id="symbols" onclick="changeSymbol()"></button>
+                <button id="symbols">Symbols</button>
             </div>
+            <button onclick="passwordGen()">Generate passwords</button>
         </div>
 
         <div id="password-container">

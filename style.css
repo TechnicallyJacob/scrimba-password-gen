@@ -43,6 +43,19 @@ html body {
     flex-direction: row-reverse;
 }
 
+#symbols {
+    color: blue;
+}
+
+#numbers {
+    color: green;
+}
+
+.symbol-trans, .number-trans {
+    color: red;
+    font-size: larger;
+}
+
 #copy-message {
     position: absolute;
     z-index: 10;

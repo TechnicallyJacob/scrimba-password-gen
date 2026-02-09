@@ -36,29 +36,29 @@ passwordLengthInput.addEventListener('input', () => {
     passwordLength = passwordLengthInput.value;
 });
 
-let symbolText = document.getElementById('symbol-text');
+let symbolsEl = document.getElementById('symbols');
 let symbols = true;
-const changeSymbol = () => {
+symbolsEl.addEventListener('click', () => {
     symbols = !symbols;
+    changeStatus(symbols, symbolsEl, 'symbol-trans');
     console.log(symbols);
-    if (symbols === false) {
-        symbolText.textContent = 'Exclude Symbols';
+});
+
+const changeStatus = (i, element, elmClass) => {
+    if (i === false) {
+        element.classList.add(elmClass);
     } else {
-        symbolText.textContent = 'Include Symbols';
+        element.classList.remove(elmClass);
     }
 }
 
-let numberText = document.getElementById('number-text');
+let numberEl = document.getElementById('numbers');
 let numbers = true;
-const changeNumber = () => {
+numberEl.addEventListener('click', () => {
     numbers = !numbers;
+    changeStatus(numbers, numberEl, 'number-trans')
     console.log(numbers);
-    if (numbers === false) {
-        numberText.textContent = 'Exclude Numbers';
-    } else {
-        numberText.textContent = 'Include Numbers';
-    }
-}
+});
 
 let passOne = document.getElementById('password-one');
 let passTwo = document.getElementById('password-two');
