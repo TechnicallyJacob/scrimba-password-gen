@@ -105,7 +105,7 @@ passOne.addEventListener('click', () => {
 });
 
 passTwo.addEventListener('click', () => {
-    navigator.clipboard.writeText(passOne.textContent)
+    navigator.clipboard.writeText(passTwo.textContent)
     .then (() => {
         copyMessage.classList.remove('copied');
         setTimeout(() => {
