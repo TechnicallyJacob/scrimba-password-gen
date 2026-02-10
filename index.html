@@ -14,33 +14,37 @@
 </head>
 <body>
     <div id="main-container">
-
-        <div id="sub-container">
-            <h1>Generate a <br><span id="title-sub-text">random password</span></h1>
-            <p>Never use an insecure password again</p>
-        </div>
-
-        <div id="input-container">
-            <input id="password-length" type="number" placeholder="pick a number 8-20">
-            <div class="button-container">
-                <button id="numbers">Numbers</button>
+        <div id="main-sub-con">
+            <div id="sub-container">
+                <h1 id="title-text" class="main-text">Generate a <br><span id="title-sub-text" class="main-text">random password</span></h1>
+                <p id="sub-text">Never use an insecure password again</p>
             </div>
-            <div class="button-container">
-                <button id="symbols">Symbols</button>
-            </div>
-            <button onclick="passwordGen()">Generate passwords</button>
-        </div>
 
-        <div id="password-container">
-            <div id="password-one"></div>
-            <div id="password-two"></div>
+            <div id="input-container">
+                <input id="password-length" type="number" placeholder="pick a number 8-20">
+                <div class="button-container">
+                    <div class="button-wrapper">
+                        <button id="numbers">Numbers</button>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="symbols">Symbols</button>
+                    </div>
+                </div>
+                <button onclick="passwordGen()">Generate passwords</button>
+            </div>
+
+            <div id="password-container">
+                <div id="password-one"></div>
+                <div id="password-two"></div>
+            </div>
         </div>
+    
+    <div id="copy-message" class="copied">Copied to clipboard!</div>
 
     </div>
 
     <div id="copy-message" class="copied">Copied to clipboard!</div>
 
     <script src="index.js"></script>
-
 </body>
 </html>
