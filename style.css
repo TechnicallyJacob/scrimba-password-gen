@@ -10,7 +10,9 @@ html body {
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
-
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
     background-color: var(--deep-slate);
 }
 
@@ -26,12 +28,21 @@ html body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
 }
 
 #main-sub-con {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
+     min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 #sub-container {
@@ -137,6 +148,8 @@ html body {
 
 #password-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
 }
 
